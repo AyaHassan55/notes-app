@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes_app/widgets/note_item.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -25,11 +26,14 @@ class NotesView extends StatelessWidget {
           ),
         ],
       ),
-      body: Column(
-        children: [],
+      body: const Column(
+        children: [
+          NoteItem(),
+        ],
       ),
 
     );
   }
 }
+
 
