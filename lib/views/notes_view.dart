@@ -4,14 +4,21 @@ import 'package:notes_app/cubits/notes_cubit.dart';
 import '../widgets/add_note_show_bottom_sheet.dart';
 import '../widgets/notes_list_view.dart';
 
-class NotesView extends StatelessWidget {
+class NotesView extends StatefulWidget {
   const NotesView({super.key});
+
+  @override
+  State<NotesView> createState() => _NotesViewState();
+}
+
+class _NotesViewState extends State<NotesView> {
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => NotesCubit(),
       child: Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           title: const Text('Notes', style: TextStyle(
             fontSize: 25,
