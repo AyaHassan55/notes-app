@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -15,7 +14,6 @@ class NotesCubit extends Cubit<NotesState> {
   fetchAllNotes(){
       var notesBox=Hive.box<NoteModel>(kNotesBox);
       notes=notesBox.values.toList();
-     log('yessss beee');
-
+       emit(NotesSuccess());
   }
 }
