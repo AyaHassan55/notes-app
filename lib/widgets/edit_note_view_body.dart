@@ -10,6 +10,11 @@ class EditNoteViewBody extends StatelessWidget {
       padding:  EdgeInsets.all(8.0),
       child:  Column(
         children: [
+          SizedBox(height: 16,),
+
+          CustomTextField(hint: 'Title'),
+          SizedBox(height: 16,),
+          CustomTextField(hint: 'Content',maxLines: 5,),
 
         ],
 
